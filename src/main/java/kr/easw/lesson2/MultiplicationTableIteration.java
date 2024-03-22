@@ -42,11 +42,10 @@ public class MultiplicationTableIteration {
         // 아래 2줄은 힌트입니다.
         // 아래에 제시된 2줄의 코드를 활용하여 코드를 작성해보세요.
         // 힌트를 활용하지 않아도 구현은 가능합니다.
-        int row = 1;
-        matchMultiplicationTable(first, row, checkMultiplicationTable(first, row));
-        throw new RuntimeException("이 코드 라인을 지우고, 이곳에서 작성하십시오.");
+        for (int row = 0; row < 9; row++) {
+            matchMultiplicationTable(first, row + 1, checkMultiplicationTable(first, row + 1));
+        }
     }
-
 
     /**
      * 해당 메서드는 다음과 같은 역할을 가져야 합니다 :
@@ -56,7 +55,7 @@ public class MultiplicationTableIteration {
      * @param second 구구단의 열
      */
     private static int checkMultiplicationTable(int first, int second) {
-        throw new RuntimeException("이 코드 라인을 지우고, 이곳에서 작성하십시오.");
+    	 return first * second;
     }
 
 
