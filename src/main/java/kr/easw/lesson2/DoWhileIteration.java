@@ -14,7 +14,7 @@ public class DoWhileIteration {
     private static final Scanner scanner = new Scanner(System.in);
 
     private static final int TARGET_VALUE = 21;
-
+    
     private static int currentValue = 0;
 
     public static void main(String[] args) {
@@ -37,7 +37,9 @@ public class DoWhileIteration {
      * - do-while문을 반드시 이용해야 합니다.
      */
     private static void checkValue() {
-        throw new RuntimeException("이 코드 라인을 지우고, 이곳에서 성하십시오.");
+    	do {
+            increaseValue();
+        } while (!stopGame()); 	
     }
 
     public static boolean stopGame() {
